@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainV2.css">
+    <title>Recettes à Coco</title>
+</head>
+
+<body>
+    
+        <nav id="myTopNav">
+            <img src="images/chefhat_white.png" alt="logo">
+            <ul>
+                <li><a href="">Repas</a></li>
+                <li><a href="">Desserts</a></li>
+                <li><a href="">Collations</a></li>
+                <li><a href="">Cocktails</a></li>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </ul>
+        </nav>
+
+        <!-- Menu burger -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="wrapper">
+        <div class="top">
+            <div class="topcontent_wrapper">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                    <img src="images/carrousel1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                    <img src="images/carrousel2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                    <img src="images/carrousel3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                    <img src="images/carrousel4.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            
+            </div>
+            <div class="textintro">
+                <h1>Bienvenue dans les recettes à Coco!</h1>
+                <p>Vous trouverez que les meilleures recettes testées et corrigées pendant 3 générations.</p>
+                <p>Bon appétit!</p>
+                <p class="arrow">&darr;</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category_repas">
+                <h2>Repas</h2>
+                        <button> <a href="">Découvrir</a></button>
+            </div>
+            <div class="category_desserts">
+                <h2>Desserts</h2>
+                <button> <a href="">Découvrir</a></button>
+            </div>
+            <div class="category_collations">
+                <h2>Collations</h2>
+                <button> <a href="">Découvrir</a></button>
+            </div>
+            <div class="category_cocktails">
+                <h2>Cocktails</h2>
+                <button> <a href="">Découvrir</a></button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Recettes à Coco © 2020 </p>
+        </footer>
+
+        <script>
+            var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+
+
+                function myFunction() {
+                var x = document.getElementById("myTopNav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+                } 
+
+
+
+
+            </script>
+
+    </div>
+
+</body>
+</html>
